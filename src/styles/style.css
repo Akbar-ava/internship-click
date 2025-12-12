@@ -12,7 +12,8 @@
   --danger-color: #dc3545;
   --gray-color: #626d77;
   --light-gray-color: #d2dbe8;
-  --background-color: #f0f3f7;
+  --background-color: #d4dce7;
+  --header-height: 60px;
 }
 
 html,
@@ -32,4 +33,9 @@ body {
 
 .main-app {
   flex: 1;
+}
+
+.main-app {
+  flex: 1;
+  padding-top: var(--header-height);
 }

@@ -6,9 +6,14 @@ import { GrMenu } from "react-icons/gr";
 import { FaUser } from "react-icons/fa";
 import { MdShoppingBasket } from "react-icons/md";
 import { useEffect, useState } from "react";
+import { useCart } from "../../context/CartContext";
+
+
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const { totalCount } = useCart();
 
   useEffect(() => {
     document.body.style.overflow = isSidebarOpen ? "hidden" : "";
@@ -32,8 +37,13 @@ const Header: React.FC = () => {
             <span>Войти</span>
           </NavLink>
 
-          <NavLink to={"/home"}>
-            <MdShoppingBasket className="header__icon" />
+          <NavLink to={"/home"} className="header__cart">
+            <span className="header__cartIcon">
+              <MdShoppingBasket className="header__icon" />
+              {totalCount > 0 && (
+                <span className="cart-badge">{totalCount}</span>
+              )}
+            </span>
             <span>Корзина</span>
           </NavLink>
         </nav>

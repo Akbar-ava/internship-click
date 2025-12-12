@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import apiClient from "../services/apiClient";
 import CButton from "../components/CButton";
 import "./products.css";
+import { useCart } from "../context/CartContext";
+
 
 type Product = {
   id: number;
@@ -12,6 +14,8 @@ type Product = {
 };
 
 const Products: React.FC = () => {
+  const { addToCart } = useCart();
+
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -54,7 +58,7 @@ const Products: React.FC = () => {
             <CButton
               title="Добавить в корзину"
               className="product-card__btn"
-              onClick={() => console.log("Добавлен товар:", p)}
+              onClick={() => addToCart(p)}
             />
           </article>
         ))}

@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Products from "../../products";
+import Cart from "../../components/Cart/Cart";
 
 const slide_img = [
   "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
@@ -60,6 +61,9 @@ const Home: React.FC = () => {
         </Swiper>
 
         <Products></Products>
+        <div className="home__cart">
+          <Cart />
+        </div>
       </div>
     </>
   );
