@@ -1,0 +1,60 @@
+.cinput {
+  width: 260px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cinput::placeholder {
+  color: #9ca3af;
+}
+
+.cinput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(56, 143, 243, 0.15);
+}
+
+.cinput:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.cinput--full {
+  width: 100%;
+}
+
+.cinput--error {
+  border-color: var(--danger-color);
+}
+
+.cinput--error:focus {
+  box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.15);
+}
+
+
+@media (max-width: 1200px) {
+  .cinput {
+    width: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cinput {
+    width: 180px;
+    height: 38px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cinput {
+    display: none;
+  }
+}

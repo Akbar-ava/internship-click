@@ -7,8 +7,7 @@ import { FaUser } from "react-icons/fa";
 import { MdShoppingBasket } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useCart } from "../../context/CartContext";
-
-
+import CInput from "../../components/CInput";
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -26,18 +25,22 @@ const Header: React.FC = () => {
     <>
       <header className="header container">
         <div className="header__actions header__actions-desktop">
-          <Link to={"/home"} className="header__actions__logo">
+          <Link to={"/#"} className="header__actions__logo">
             <img src={Logo} alt="Logo" />
           </Link>
         </div>
 
+        <div className="header__search">
+          <CInput placeholder="Поиск товаров..." fullWidth></CInput>
+        </div>
+
         <nav className="header__navs header__navs-desktop">
-          <NavLink to={"/home"}>
+          <NavLink to={"/#"}>
             <FaUser className="header__icon" />
             <span>Войти</span>
           </NavLink>
 
-          <NavLink to={"/home"} className="header__cart">
+          <NavLink to={"/#"} className="header__cart">
             <span className="header__cartIcon">
               <MdShoppingBasket className="header__icon" />
               {totalCount > 0 && (
