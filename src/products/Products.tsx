@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import apiClient from "../services/apiClient";
 import CButton from "../components/CButton";
-import "./products.css";
+import "./Products.css";
 import { useCart } from "../context/CartContext";
 
 
