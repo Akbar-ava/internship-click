@@ -1,0 +1,62 @@
+[
+{
+  "id": 101,
+  "title": "Men's Casual Cotton T-Shirt",
+  "price": 19.99,
+  "description": "Soft cotton t-shirt with regular fit, perfect for everyday wear.",
+  "category": "men's clothing",
+  "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+  "rating": {
+    "rate": 4.3,
+    "count": 120
+  }
+},
+{
+  "id": 102,
+  "title": "Wireless Bluetooth Headphones",
+  "price": 59.99,
+  "description": "Over-ear wireless headphones with noise cancellation and long battery life.",
+  "category": "electronics",
+  "image": "https://m.media-amazon.com/images/I/61RahTQtAqL._AC_UF894,1000_QL80_.jpg",
+  "rating": {
+    "rate": 4.6,
+    "count": 340
+  }
+},
+{
+  "id": 103,
+  "title": "Silver Necklace with Pendant",
+  "price": 89.5,
+  "description": "Elegant silver necklace suitable for formal and casual outfits.",
+  "category": "jewelery",
+  "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519",
+  "rating": {
+    "rate": 4.8,
+    "count": 75
+  }
+},
+{
+  "id": 104,
+  "title": "Women's Summer Dress",
+  "price": 34.99,
+  "description": "Lightweight summer dress made from breathable fabric.",
+  "category": "women's clothing",
+  "image": "https://i5.walmartimages.com/seo/Herrnalise-Summer-Dresses-Women-2024-Trendy-Sling-Halter-Dress-elegant-Medium-length-Dress-Sleeveless-Bandeau-Back-Tank-Tops-Floral-Print-Pleated-Sun_08276dff-7892-40b9-b403-dc352b3e88cd.f8b620f665376a819f5536c687a552c5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+  "rating": {
+    "rate": 4.4,
+    "count": 210
+  }
+},
+{
+  "id": 105,
+  "title": "Smart Fitness Watch",
+  "price": 129.99,
+  "description": "Fitness watch with heart rate monitoring and activity tracking.",
+  "category": "electronics",
+  "image": "https://api.idea.uz/storage/products/December2024/cJsJjdOl7FwW9ybPhqYf-medium.png",
+  "rating": {
+    "rate": 4.5,
+    "count": 410
+  }
+}
+]

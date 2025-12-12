@@ -3,14 +3,16 @@ import apiClient from "../services/apiClient";
 import CButton from "../components/CButton";
 import "./Products.css";
 import { useCart } from "../context/CartContext";
-
+import mockProducts from "../db/mock-db.json";
 
 type Product = {
   id: number;
   title: string;
   price: number;
-  image: string;
+  description?: string;
   category: string;
+  image: string;
+  rating?: { rate: number; count: number };
 };
 
 const Products: React.FC = () => {
@@ -19,26 +21,47 @@ const Products: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [dataSource, setDataSource] = useState<"api" | "mock">("api");
 
   useEffect(() => {
+    let alive = true;
+
     (async () => {
       try {
+        setLoading(true);
+        setError(null);
+
         const { data } = await apiClient.get<Product[]>("/products");
+        if (!alive) return;
+
         setProducts(data);
+        setDataSource("api");
       } catch (e: any) {
-        setError("Ошибка загрузки товаров");
+        if (!alive) return;
+
+        setProducts(mockProducts as Product[]);
+        setDataSource("mock");
+        setError("API недоступно — показаны локальные товары.");
       } finally {
-        setLoading(false);
+        if (alive) setLoading(false);
       }
     })();
+
+    return () => {
+      alive = false;
+    };
   }, []);
 
   if (loading) return <div className="products">Загрузка...</div>;
-  if (error) return <div className="products">{error}</div>;
 
   return (
     <section className="products">
-      <h2 className="products__title">Товары</h2>
+      <div className="products__head">
+        <h2 className="products__title">Товары</h2>
+        {dataSource === "mock" && <span className="products__badge">mock</span>}
+      </div>
+
+      {error && <div className="products__error">{error}</div>}
 
       <div className="products__grid">
         {products.map((p) => (
