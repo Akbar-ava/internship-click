@@ -1,7 +1,7 @@
 import type React from "react";
 import "./Header.css";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../../assets/images/logo1.svg";
+import Logo from "../../assets/images/logo.png";
 import { GrMenu } from "react-icons/gr";
 import { FaUser } from "react-icons/fa";
 import { MdShoppingBasket } from "react-icons/md";
