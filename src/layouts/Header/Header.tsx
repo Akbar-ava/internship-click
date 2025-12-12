@@ -1,16 +1,16 @@
 import type React from "react";
 import "./Header.css";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../../assets/images/logo.png"
+import Logo from "../../assets/images/logo.png";
 import { GrMenu } from "react-icons/gr";
-import { FaUser } from 'react-icons/fa';
-import { MdShoppingBasket } from 'react-icons/md';
+import { FaUser } from "react-icons/fa";
+import { MdShoppingBasket } from "react-icons/md";
 import { useState } from "react";
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  return(
+  return (
     <>
       <div className="header container">
         <div className="header__actions">
@@ -21,13 +21,13 @@ const Header: React.FC = () => {
 
         <div className="header__navs">
           <NavLink to={"/home"}>
-            <FaUser style={{ fontSize: '1.5rem', color: 'grey' }} />
-             <span>Войти</span>
+            <FaUser style={{ fontSize: "1.5rem", color: "grey" }} />
+            <span>Войти</span>
           </NavLink>
 
           <NavLink to={"/home"}>
-            <MdShoppingBasket style={{ fontSize: '1.5rem', color: 'grey'}}  />
-             <span>Корзина</span>
+            <MdShoppingBasket style={{ fontSize: "1.5rem", color: "grey" }} />
+            <span>Корзина</span>
           </NavLink>
         </div>
 
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 };
 
 export default Header;

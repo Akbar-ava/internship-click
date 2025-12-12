@@ -1,0 +1,20 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.break__line {
+  height: 1px;
+  background-color: rgb(179, 179, 179);
+}
+
+.footer__bottom-info p{
+  display: inline-flex;
+  gap: 0.2rem;
+}
