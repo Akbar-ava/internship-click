@@ -8,7 +8,6 @@ import { MdShoppingBasket } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useCart } from "../../context/CartContext";
 import CInput from "../../components/CInput";
-import { useLocation, useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
