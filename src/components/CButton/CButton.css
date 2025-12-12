@@ -1,0 +1,22 @@
+.cbtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #388FF3;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cbtn:hover {
+    opacity: 0.8;
+}
+
+.cbtn:focus {
+  scale: 0.98;
+}

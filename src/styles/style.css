@@ -6,8 +6,19 @@
 }
 
 :root {
-  --primary-color: #ffffff;
+  --primary-color: #388ff3;
   --secondary-color: #000000;
   --success-color: #28a745;
   --danger-color: #dc3545;
+  --gray-color: #626d77;
+  --light-gray-color: #d2dbe8;
+  --background-color: #f0f3f7;
 }
+
+/* html[data-theme='light'] {
+    --background-color: #F5F5F5;
+    --on-background-color: #000000;
+    --content-bg-color: #FFFFFF;
+    --text-color: #000000;
+    --on-text-color: #ffffff;
+} */
