@@ -1,0 +1,41 @@
+.mySwiper {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.mySwiper .swiper-slide {
+  width: clamp(220px, 70vw, 360px); 
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.mySwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;               
+  object-position: center; 
+}
+
+
+@media (min-width: 768px) {
+  .mySwiper {
+    width: 80%;
+    padding: 40px 0 50px;
+  }
+  .mySwiper .swiper-slide {
+    width: 320px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mySwiper {
+    width: 50%;                    
+  }
+  .mySwiper .swiper-slide {
+    width: 340px;
+  }
+}
