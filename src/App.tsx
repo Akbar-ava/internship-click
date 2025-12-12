@@ -3,7 +3,7 @@ import apiClient from "./services/apiClient";
 import Router  from "./routes/Router";
 
 const App: React.FC = () => {
-  const fetchProducts = async () => {
+  /* const fetchProducts = async () => {
     try {
       const response = await apiClient.get("/products");
       const data = response.data;
@@ -11,7 +11,7 @@ const App: React.FC = () => {
     } catch (error) {
       console.log("Error fetching products", error);
     }
-  };
+  }; */
   return <Router/>;
 };
 

@@ -1,9 +1,6 @@
 import type React from "react";
 import "./Home.css";
 
-import CButton from "../../components/CButton";
-import CInput from "../../components/CInput";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
