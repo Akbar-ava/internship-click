@@ -5,11 +5,12 @@ import CButton from "../../components/CButton";
 import CInput from "../../components/CInput";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Products from "../../products";
 
 const slide_img = [
   "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
@@ -23,9 +24,7 @@ const slide_img = [
 const Home: React.FC = () => {
   return (
     <>
-      <h1>Home</h1>
-
-      <div>
+      <div className="home container">
         <Swiper
           effect="creative"
           grabCursor={true}
@@ -59,6 +58,8 @@ const Home: React.FC = () => {
             );
           })}
         </Swiper>
+
+        <Products></Products>
       </div>
     </>
   );
