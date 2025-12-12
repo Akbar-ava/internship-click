@@ -89,7 +89,7 @@ const Header: React.FC = () => {
             <span>Войти</span>
           </NavLink>
 
-          <NavLink to={"/#"} onClick={() => setIsSidebarOpen(false)}>
+          <NavLink to={"/#cart"} onClick={() => setIsSidebarOpen(false)}>
             <MdShoppingBasket className="header__icon" />
             <span>Корзина</span>
           </NavLink>
