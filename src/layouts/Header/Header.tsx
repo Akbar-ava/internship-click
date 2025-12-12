@@ -84,12 +84,12 @@ const Header: React.FC = () => {
         </div>
 
         <nav className="sidebar__navs">
-          <NavLink to={"/home"} onClick={() => setIsSidebarOpen(false)}>
+          <NavLink to={"/#"} onClick={() => setIsSidebarOpen(false)}>
             <FaUser className="header__icon" />
             <span>Войти</span>
           </NavLink>
 
-          <NavLink to={"/home"} onClick={() => setIsSidebarOpen(false)}>
+          <NavLink to={"/#"} onClick={() => setIsSidebarOpen(false)}>
             <MdShoppingBasket className="header__icon" />
             <span>Корзина</span>
           </NavLink>
