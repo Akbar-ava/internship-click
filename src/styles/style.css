@@ -15,10 +15,21 @@
   --background-color: #f0f3f7;
 }
 
-/* html[data-theme='light'] {
-    --background-color: #F5F5F5;
-    --on-background-color: #000000;
-    --content-bg-color: #FFFFFF;
-    --text-color: #000000;
-    --on-text-color: #ffffff;
-} */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--background-color);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-app {
+  flex: 1;
+}
