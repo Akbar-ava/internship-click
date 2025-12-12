@@ -9,6 +9,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Products from "../../products";
 import Cart from "../../components/Cart/Cart";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const slide_img = [
   "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
@@ -20,6 +22,16 @@ const slide_img = [
 ];
 
 const Home: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <div className="home container">
@@ -58,7 +70,7 @@ const Home: React.FC = () => {
         </Swiper>
 
         <Products></Products>
-        <div className="home__cart">
+        <div className="home__cart" id="cart">
           <Cart />
         </div>
       </div>
