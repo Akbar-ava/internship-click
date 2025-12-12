@@ -1,5 +1,4 @@
 import React from "react";
-import apiClient from "./services/apiClient";
 import Router  from "./routes/Router";
 
 const App: React.FC = () => {
