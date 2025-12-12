@@ -4,23 +4,25 @@ import { FaCopyright } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer container">
-      <div className="footer__main-info">
-        <p>
-          77 маркетплейс - электронная платформа в Узбекистане, с помощью
-          которой соверщаются онлайн покупки
-        </p>
-      </div>
+    <footer className="footer">
+      <div className="container">
+        <div className="footer__main-info">
+          <p>
+            77 Маркетплейс — электронная платформа в Узбекистане, с помощью
+            которой совершаются онлайн-покупки.
+          </p>
+        </div>
 
-      <div className="break__line"></div>
+        <div className="break__line" />
 
-      <div className="footer__bottom-info">
-        <p>
-          <FaCopyright size={"1.2rem"} />
-          {new Date().getFullYear()} 77 MarketPlace. All rights reserved.
-        </p>
+        <div className="footer__bottom-info">
+          <p>
+            <FaCopyright />
+            {new Date().getFullYear()} 77 MarketPlace. All rights reserved.
+          </p>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
