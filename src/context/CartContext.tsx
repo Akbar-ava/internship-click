@@ -28,7 +28,6 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return raw ? (JSON.parse(raw) as CartItemType[]) : [];
   });
 
-  // ✅ сохраняем в localStorage
   useEffect(() => {
     localStorage.setItem(LS_KEY, JSON.stringify(items));
   }, [items]);
